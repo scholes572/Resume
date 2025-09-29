@@ -1,4 +1,4 @@
-* {
+ * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -10,6 +10,7 @@
             color: #2c3e50;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
+            min-height: 100vh;
         }
         
         .container {
@@ -24,12 +25,12 @@
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
         }
         
         .header h1 {
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 15px;
             font-weight: 700;
             letter-spacing: 1px;
@@ -38,33 +39,34 @@
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 15px;
             flex-wrap: wrap;
             margin-top: 15px;
             font-size: 14px;
         }
         
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-block;
+            padding: 5px 0;
         }
         
         .contact-item::before {
-            content: '●';
+            content: '● ';
             font-size: 8px;
         }
         
         .content {
-            padding: 40px;
+            padding: 30px 20px;
         }
         
         .section {
-            margin-bottom: 35px;
+            margin-bottom: 30px;
+            width: 100%;
+            clear: both;
         }
         
         .section-title {
-            font-size: 22px;
+            font-size: 20px;
             color: #667eea;
             border-bottom: 3px solid #667eea;
             padding-bottom: 8px;
@@ -86,23 +88,22 @@
         }
         
         .education-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
             margin-bottom: 8px;
-            flex-wrap: wrap;
         }
         
         .school-name {
             font-size: 18px;
             font-weight: 600;
             color: #2c3e50;
+            display: block;
+            margin-bottom: 5px;
         }
         
         .period {
             color: #7f8c8d;
             font-size: 14px;
             font-style: italic;
+            display: block;
         }
         
         .subjects {
@@ -125,9 +126,8 @@
         }
         
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            display: block;
+            width: 100%;
         }
         
         .skill-category {
@@ -135,6 +135,8 @@
             padding: 15px;
             border-radius: 6px;
             border-left: 4px solid #764ba2;
+            margin-bottom: 15px;
+            width: 100%;
         }
         
         .skill-category h3 {
@@ -150,16 +152,15 @@
         }
         
         .skill-category li {
-            padding: 4px 0;
+            padding: 6px 0;
             color: #555;
             font-size: 14px;
         }
         
         .skill-category li::before {
-            content: '▹';
+            content: '▹ ';
             color: #764ba2;
             font-weight: bold;
-            margin-right: 8px;
         }
         
         .experience-content {
@@ -172,21 +173,21 @@
         .experience-content p {
             color: #555;
             line-height: 1.8;
+            margin: 0;
         }
         
         .languages {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
+            display: block;
+            width: 100%;
         }
         
         .language-item {
-            flex: 1;
-            min-width: 200px;
             background: #f8f9fa;
             padding: 15px;
             border-radius: 6px;
             text-align: center;
+            margin-bottom: 15px;
+            width: 100%;
         }
         
         .language-name {
@@ -202,16 +203,66 @@
         }
         
         .highlight-box {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            background: #f0f4ff;
             padding: 20px;
             border-radius: 6px;
             margin-top: 15px;
-            border: 2px solid #667eea30;
+            border: 2px solid #d0d8f0;
         }
         
         .highlight-box p {
             color: #555;
             line-height: 1.8;
+            margin: 0;
+        }
+        
+        .highlight-box strong {
+            color: #667eea;
+        }
+        
+        @media screen and (min-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .content {
+                padding: 40px;
+            }
+            
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .skill-category {
+                margin-bottom: 0;
+            }
+            
+            .languages {
+                display: flex;
+                gap: 20px;
+            }
+            
+            .language-item {
+                flex: 1;
+                margin-bottom: 0;
+            }
+            
+            .education-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            
+            .school-name {
+                display: inline;
+                margin-bottom: 0;
+            }
+            
+            .period {
+                display: inline;
+            }
         }
         
         @media print {
@@ -224,19 +275,8 @@
                 box-shadow: none;
                 max-width: 100%;
             }
-        }
-        
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 28px;
-            }
             
-            .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .content {
-                padding: 20px;
+            .section {
+                page-break-inside: avoid;
             }
         }
