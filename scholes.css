@@ -35,7 +35,7 @@
             letter-spacing: 1px;
         }
         
-        .contact info {
+        .contact-info {
             display: flex;
             justify-content: center;
             gap: 25px;
@@ -44,13 +44,13 @@
             font-size: 14px;
         }
         
-        .contact item {
+        .contact-item {
             display: flex;
             align-items: center;
             gap: 8px;
         }
         
-        .contact item::before {
+        .contact-item::before {
             content: '●';
             font-size: 8px;
         }
@@ -63,7 +63,7 @@
             margin-bottom: 35px;
         }
         
-        .section title {
+        .section-title {
             font-size: 22px;
             color: #667eea;
             border-bottom: 3px solid #667eea;
@@ -81,11 +81,11 @@
             text-align: justify;
         }
         
-        .education item {
+        .education-item {
             margin-bottom: 15px;
         }
         
-        .education header {
+        .education-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
@@ -93,7 +93,7 @@
             flex-wrap: wrap;
         }
         
-        .school name {
+        .school-name {
             font-size: 18px;
             font-weight: 600;
             color: #2c3e50;
@@ -124,52 +124,52 @@
             color: #555;
         }
         
-        .skills grid {
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
         
-        .skill category {
+        .skill-category {
             background: #f8f9fa;
             padding: 15px;
             border-radius: 6px;
             border-left: 4px solid #764ba2;
         }
         
-        .skill category h3 {
+        .skill-category h3 {
             color: #667eea;
             font-size: 16px;
             margin-bottom: 10px;
             font-weight: 600;
         }
         
-        .skill category ul {
+        .skill-category ul {
             list-style: none;
             padding-left: 0;
         }
         
-        .skill category li {
+        .skill-category li {
             padding: 4px 0;
             color: #555;
             font-size: 14px;
         }
         
-        .skill category li::before {
+        .skill-category li::before {
             content: '▹';
             color: #764ba2;
             font-weight: bold;
             margin-right: 8px;
         }
         
-        .experience content {
+        .experience-content {
             background: #f8f9fa;
             padding: 20px;
             border-radius: 6px;
             border-left: 4px solid #667eea;
         }
         
-        .experience content p {
+        .experience-content p {
             color: #555;
             line-height: 1.8;
         }
@@ -180,7 +180,7 @@
             flex-wrap: wrap;
         }
         
-        .language item {
+        .language-item {
             flex: 1;
             min-width: 200px;
             background: #f8f9fa;
@@ -189,19 +189,19 @@
             text-align: center;
         }
         
-        .language name {
+        .language-name {
             font-weight: 600;
             color: #667eea;
             font-size: 16px;
             margin-bottom: 5px;
         }
         
-        .language level {
+        .language-level {
             color: #7f8c8d;
             font-size: 14px;
         }
         
-        .highlight box {
+        .highlight-box {
             background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
             padding: 20px;
             border-radius: 6px;
@@ -209,7 +209,7 @@
             border: 2px solid #667eea30;
         }
         
-        .highlight box p {
+        .highlight-box p {
             color: #555;
             line-height: 1.8;
         }
@@ -231,7 +231,7 @@
                 font-size: 28px;
             }
             
-            .contact info {
+            .contact-info {
                 flex-direction: column;
                 gap: 10px;
             }
